@@ -15,7 +15,8 @@
     "license": "MIT",
     "main": "./lib/index.js",
     "dependencies": {
-        "parse5": "^5.1.0"
+        "parse5": "^5.1.0",
+        "web-streams-polyfill": "^2.0.3"
     },
     "repository": {
         "type": "git",

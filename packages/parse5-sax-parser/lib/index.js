@@ -1,6 +1,11 @@
 'use strict';
 
-const { Transform } = require('stream');
+var Transform;
+if (process.env.__PLATFORM__ === 'browser') {
+  Transform = require('./dom-stream').Transform;
+} else {
+  Transform = require('stream').Transform;
+}
 const Tokenizer = require('parse5/lib/tokenizer');
 const LocationInfoTokenizerMixin = require('parse5/lib/extensions/location-info/tokenizer-mixin');
 const Mixin = require('parse5/lib/utils/mixin');
